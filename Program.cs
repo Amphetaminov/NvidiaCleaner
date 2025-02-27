@@ -27,26 +27,26 @@ class Program
         try
         {
             Console.Title = "Made by Amphetaminov";
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("╔══════════════════════════════════════════════╗");
-            Console.WriteLine("║       NVIDIA Control Panel Cleaner           ║");
-            Console.WriteLine("║     для очистки настроек любой программы     ║");
-            Console.WriteLine("║          Made by Amphetaminov                ║");
-            Console.WriteLine("╚══════════════════════════════════════════════╝");
-            Console.WriteLine();
-            
-            if (!IsAdministrator())
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Эта программа требует прав администратора!");
-                Console.WriteLine("Пожалуйста, запустите программу от имени администратора.");
+        Console.OutputEncoding = Encoding.UTF8;
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("╔══════════════════════════════════════════════╗");
+        Console.WriteLine("║       NVIDIA Control Panel Cleaner           ║");
+        Console.WriteLine("║     для очистки настроек любой программы     ║");
+        Console.WriteLine("║          Made by Amphetaminov                ║");
+        Console.WriteLine("╚══════════════════════════════════════════════╝");
+        Console.WriteLine();
+        
+        if (!IsAdministrator())
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Эта программа требует прав администратора!");
+            Console.WriteLine("Пожалуйста, запустите программу от имени администратора.");
                 WaitAndExit();
-                return;
-            }
-
+            return;
+        }
+        
             // Проверка активации
-            Console.ForegroundColor = ConsoleColor.White;
+        Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Введите ключ активации:");
             Console.ForegroundColor = ConsoleColor.Yellow;
             string? activationKey = Console.ReadLine()?.Trim().ToLower();
@@ -56,10 +56,10 @@ class Program
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Неверный ключ активации!");
                 WaitAndExit();
-                return;
-            }
-
-            Console.ForegroundColor = ConsoleColor.Green;
+            return;
+        }
+        
+        Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Активация успешна!");
             Thread.Sleep(1000);
             ClearConsole();
@@ -88,7 +88,7 @@ class Program
             var foundFiles = new List<string>();
             var foundProgramInFiles = new List<(string File, List<string> FoundPatterns)>();
             
-            Console.ForegroundColor = ConsoleColor.White;
+        Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Поиск файлов NVIDIA...");
 
             // Поиск всех файлов NVIDIA
@@ -179,7 +179,7 @@ class Program
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"\nНайдены записи о программе в {foundProgramInFiles.Count} файлах!");
-
+                
                 // Спрашиваем пользователя о продолжении
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"\nВы уверены, что хотите удалить все найденные записи из NVIDIA Control Panel?");
