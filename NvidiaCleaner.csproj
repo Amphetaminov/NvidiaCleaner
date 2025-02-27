@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <PublishTrimmed>true</PublishTrimmed>
+        <PublishSingleFile>true</PublishSingleFile>
+        <SelfContained>true</SelfContained>
+        <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+        <DebugType>embedded</DebugType>
+        <Version>1.0.0</Version>
+        <Company>Amphetaminov</Company>
+        <Product>NVIDIA Control Panel Cleaner</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+    </ItemGroup>
+</Project> 
